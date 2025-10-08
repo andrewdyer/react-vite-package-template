@@ -10,7 +10,7 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       outDir: 'dist/types',
-      tsconfigPath: path.resolve(__dirname, 'tsconfig.build.json'),
+      tsconfigPath: './tsconfig.lib.json',
       insertTypesEntry: true,
       copyDtsFiles: true,
     }),
@@ -39,6 +39,9 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['src/setupTests.ts'],
     include: ['src/**/*.{test,spec}.{ts,tsx}'],
+        typecheck: {
+      tsconfig: './tsconfig.test.json',
+    },
     coverage: {
       reportsDirectory: 'coverage',
       provider: 'v8',
