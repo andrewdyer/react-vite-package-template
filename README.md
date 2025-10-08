@@ -1,8 +1,8 @@
-![React Package Template](https://raw.githubusercontent.com/andrewdyer/public-assets/refs/heads/main/images/covers/react-package-template.png)
+![React + Vite Package Template](https://raw.githubusercontent.com/andrewdyer/public-assets/refs/heads/main/images/covers/react-vite-package-template.png)
 
-# React Package Template
+# React + Vite Package Template
 
-A template for creating [React](https://react.dev/) packages.
+A template for creating packages using the [React](https://react.dev/) framework and the [Vite](https://vitejs.dev/) build tool, and written in [TypeScript](https://www.typescriptlang.org/).
 
 ## ⚖️ License
 
