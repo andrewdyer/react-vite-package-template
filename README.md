@@ -29,7 +29,7 @@ This template includes the following tools and configurations:
 - [Vitest](https://vitest.dev/) for unit testing, along with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), Vitest UI, and coverage reports.
 - [Storybook](https://storybook.js.org/) for building and testing UI components in isolation.
 - [Prettier](https://prettier.io/) for consistent code formatting across the codebase.
-- [Husky](https://typicode.github.io/husky/#/) for Git hooks to automate tasks such as formatting, type-checking, and testing before commits.
+- [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) for running linters and formatters on staged files before commits.
 - CI (Continuous Integration) setup with [GitHub Actions](https://github.com/features/actions) for automated testing, building, type-checking, and publishing the package to npmjs.
 
 ## 🚀 Getting Started
@@ -38,4 +38,5 @@ If you like what you've seen so far and think this setup fits your needs, you ca
 
 ## 🤝 Contributing
 
+Before contributing to this package, please refer to the [contributing](./CONTRIBUTING.md) documentation.
 Before contributing to this package, please refer to the [contributing](./CONTRIBUTING.md) documentation.
