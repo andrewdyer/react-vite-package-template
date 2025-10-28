@@ -28,7 +28,8 @@ This template includes the following tools and configurations:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking, with dedicated configurations for builds and development.
 - [Vitest](https://vitest.dev/) for unit testing, along with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), Vitest UI, and coverage reports.
 - [Storybook](https://storybook.js.org/) for building and testing UI components in isolation.
-- [Prettier](https://prettier.io/) for consistent code formatting across the codebase. - [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) for running linters and formatters on staged files before commits.
+- [Prettier](https://prettier.io/) for consistent code formatting across the codebase.
+- [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) for running linters and formatters on staged files before commits.
 - CI (Continuous Integration) setup with [GitHub Actions](https://github.com/features/actions) for automated testing, building, type-checking, and publishing the package to npmjs.
 
 ## 🚀 Getting Started
