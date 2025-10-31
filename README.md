@@ -1,4 +1,4 @@
-![React + Vite Package Template](https://raw.githubusercontent.com/andrewdyer/public-assets/refs/heads/main/images/covers/react-vite-package-template.png)
+![React + Vite Package Template](https://public-assets.andrewdyer.rocks/images/covers/react-vite-package-template.png)
 
 # React + Vite Package Template
 
