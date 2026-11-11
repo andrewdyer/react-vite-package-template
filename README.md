@@ -1,42 +1,68 @@
-![React + Vite Package Template](https://public-assets.andrewdyer.rocks/images/covers/react-vite-package-template.png)
-
 # React + Vite Package Template
 
 A template for creating packages using the [React](https://react.dev/) framework and the [Vite](https://vitejs.dev/) build tool, and written in [TypeScript](https://www.typescriptlang.org/).
 
-## ⚖️ License
+## Introduction
 
-Licensed under the [MIT license](https://opensource.org/licenses/MIT) and is free for private or commercial projects.
+This template provides a focused foundation for building and publishing reusable React component packages. It is designed to support consistent tooling, reliable builds, and automated releases, so effort goes into the components rather than the setup. Its tooling and configuration mirror the shared packages in the [React + Vite + Turborepo Template](https://github.com/andrewdyer/react-vite-turborepo-template), allowing a package to start life as a standalone repository and move into a monorepo later with minimal changes.
 
-## ✨ Introduction
-
-This template is designed to provide a solid foundation to help you hit the ground running and save valuable time when starting a new React package. With all the necessary tools and configurations included, you can focus on building your package without worrying about the initial setup.
-
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- **[Node.js](https://nodejs.org/)**: Version 22.x (as specified in [.nvmrc](.nvmrc)) is required.
-- **[npm](https://www.npmjs.com/)**: Dependency management tool, version 9.x or higher.
-- **[yalc](https://github.com/wclr/yalc)** (optional): For local package development and testing.
+- **[Node.js](https://nodejs.org/)**: Version 24.19.0 is required (as specified in [.nvmrc](.nvmrc)).
+- **[pnpm](https://pnpm.io/)**: Dependency management tool for Node.js, version 10.17.1 (as specified in [package.json](package.json)).
+- **[yalc](https://github.com/wclr/yalc)** (optional): For testing the package locally in other projects without publishing it.
 
-## 🛠️ Features
+## Package
 
-This template includes the following tools and configurations:
+The repository follows a clear structure, keeping components, their tests and stories together alongside the build and tooling configuration.
 
-- [Vite](https://vitejs.dev/) for fast builds and modern bundling with multiple output formats (ESM, CJS, and UMD), using [`@vitejs/plugin-react-swc`](https://www.npmjs.com/package/@vitejs/plugin-react-swc) for React support.
-- [TypeScript](https://www.typescriptlang.org/) for static type checking, with dedicated configurations for builds and development.
-- [Vitest](https://vitest.dev/) for unit testing, along with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), Vitest UI, and coverage reports.
-- [Storybook](https://storybook.js.org/) for building and testing UI components in isolation.
-- [Prettier](https://prettier.io/) for consistent code formatting across the codebase.
-- [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) for running linters and formatters on staged files before commits.
-- CI (Continuous Integration) setup with [GitHub Actions](https://github.com/features/actions) for automated testing, building, type-checking, and publishing the package to npmjs.
+```plaintext
+repo/
+├── .github/
+│   └── workflows/             # Test, PR title, release and publish workflows
+│
+├── .husky/                    # Git hooks for lint-staged and commitlint
+├── .storybook/                # Storybook configuration
+│
+├── src/
+│   ├── components/            # React components with tests and stories
+│   ├── index.ts               # Package entry point
+│   └── setupTests.ts          # Vitest setup
+│
+├── eslint.config.js           # ESLint configuration
+├── package.json               # Package manifest and scripts
+├── tsconfig.json              # TypeScript project references
+└── vite.config.ts             # Library build and Vitest configuration
+```
 
-## 🚀 Getting Started
+The package is built with Vite and TypeScript, providing reusable components ready to publish and consume in other React projects. Key features include:
+
+- [SWC (Speedy Web Compiler)](https://swc.rs/) for faster builds and development.
+- ES module, CommonJS, and UMD builds, with React kept as a peer dependency rather than bundled.
+- TypeScript declaration generation with [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts).
+- [Vitest](https://vitest.dev/) for unit testing, along with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing React components, [Vitest UI](https://vitest.dev/guide/ui.html), [jsdom](https://github.com/jsdom/jsdom) environment, and [coverage reports](https://vitest.dev/guide/coverage.html) with enforced thresholds.
+- [Storybook](https://storybook.js.org/) for developing and documenting components in isolation, with accessibility checks.
+- [ESLint](https://eslint.org/) rules matching the shared configuration in the React + Vite + Turborepo Template.
+- Pre-commit checks with [lint-staged](https://github.com/lint-staged/lint-staged) to maintain code quality.
+
+## Tooling
+
+Essential development tools configured for consistency and automation across the package, including:
+
+- [Husky](https://typicode.github.io/husky) for Git hooks that automate development workflows, including staged file checks and commit message validation.
+- [Commitlint](https://commitlint.js.org/) for enforcing a consistent commit message convention on commits and pull request titles.
+- [Prettier](https://prettier.io/) for maintaining consistent code formatting.
+- [Release Please](https://github.com/googleapis/release-please) for automated versioning and changelogs based on commit messages.
+- [GitHub Actions](https://github.com/features/actions) for CI/CD, covering testing and pull request title checks, automated releasing, and publishing the package to [npm](https://www.npmjs.com/) with trusted publishing.
+
+Together, these tools create a fast, reliable, and maintainable developer experience from the first component to the first release.
+
+## Getting Started
 
 If you like what you've seen so far and think this setup fits your needs, you can quickly get started by clicking the **Use this template** button at the top of the repository on GitHub.
 
-## 🤝 Contributing
+## License
 
-Before contributing to this package, please refer to the [contributing](./CONTRIBUTING.md) documentation.
-Before contributing to this package, please refer to the [contributing](./CONTRIBUTING.md) documentation.
+This template is licensed under the [MIT license](https://opensource.org/licenses/MIT) and is free for private or commercial projects.
