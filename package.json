@@ -1,6 +1,10 @@
 {
   "name": "react-vite-package-template",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewdyer/react-vite-package-template.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=24.19.0"
