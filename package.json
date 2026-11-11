@@ -28,7 +28,7 @@
   "scripts": {
     "build": "vite build",
     "build:storybook": "storybook build",
-    "format": "prettier --write .",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'",
     "lint": "eslint .",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
