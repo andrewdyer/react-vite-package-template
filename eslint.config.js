@@ -22,6 +22,7 @@ export default [
       'jsx-a11y': jsxA11y,
     },
     rules: {
+      ...jsxA11y.flatConfigs.recommended.rules,
       'import/order': [
         'warn',
         {
