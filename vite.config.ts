@@ -1,5 +1,4 @@
 /// <reference types="vitest" />
-import * as path from 'path';
 
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
@@ -20,20 +19,12 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'react-vite-package-template',
-      fileName: (format) => `index.${format}.js`,
-      formats: ['es', 'cjs', 'umd'],
+      entry: 'src/index.ts',
+      formats: ['es'],
+      fileName: () => 'index.js',
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-          'react/jsx-runtime': 'jsxRuntime',
-        },
-      },
     },
   },
   test: {

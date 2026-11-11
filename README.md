@@ -39,7 +39,7 @@ repo/
 The package is built with Vite and TypeScript, providing reusable components ready to publish and consume in other React projects. Key features include:
 
 - [SWC (Speedy Web Compiler)](https://swc.rs/) for faster builds and development.
-- ES module, CommonJS, and UMD builds, with React kept as a peer dependency rather than bundled.
+- ES module builds, with React kept as a peer dependency rather than bundled.
 - TypeScript declaration generation with [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts).
 - [Vitest](https://vitest.dev/) for unit testing, along with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing React components, [Vitest UI](https://vitest.dev/guide/ui.html), [jsdom](https://github.com/jsdom/jsdom) environment, and [coverage reports](https://vitest.dev/guide/coverage.html) with enforced thresholds.
 - [Storybook](https://storybook.js.org/) for developing and documenting components in isolation, with accessibility checks.
