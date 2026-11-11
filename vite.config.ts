@@ -1,4 +1,4 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
@@ -36,7 +36,6 @@ export default defineConfig({
       tsconfig: './tsconfig.test.json',
     },
     coverage: {
-      all: true,
       include: ['src/**/*.{ts,tsx}'],
       provider: 'v8',
       reporter: ['text', 'lcov', 'html'],
