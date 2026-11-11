@@ -10,7 +10,6 @@ Thank you for your interest in contributing! We welcome improvements and suggest
 - [Commit Guidelines](#commit-guidelines)
 - [Testing](#testing)
 - [Building](#building)
-- [Local Development with Yalc](#local-development-with-yalc)
 - [Publishing](#publishing)
 
 ## Development Setup
@@ -22,7 +21,7 @@ To get started with contributing, set up the project by following these steps:
    - Install `nvm` if you haven't already. Follow the instructions on the [nvm GitHub repository](https://github.com/nvm-sh/nvm).
    - Run `nvm use` to switch to the required Node.js version.
 3. Install all project dependencies to ensure a complete setup with `npm install`.
-4. Start Storybook using `npm run storybook` to develop and test UI components in isolation.
+4. Start Storybook using `npm run start:storybook` to develop and test UI components in isolation.
 5. Run tests with `npm test` to verify that the environment is working correctly. You can also use `npm run test:watch` to run the tests in watch mode, and `npm run test:coverage` to generate a coverage report.
 
 ## Upgrading Dependencies
@@ -74,20 +73,7 @@ Use the following commands as needed to build and preview the project:
   - Build CommonJS (CJS) modules for the project with `npm run build:cjs`.
   - Build ES Modules (ESM) for the project with `npm run build:esm`.
   - Generate TypeScript declaration files with `npm run build:types`.
-  - Clean the `dist/` folder to ensure a clean build with `npm run clean`.
 - Generate a static Storybook build with `npm run build:storybook`.
-
-## Local Development with Yalc
-
-Use Yalc to test this package locally in other projects without publishing it to the npm registry.
-
-1. Install Yalc globally using `npm install yalc -g`.
-2. In the target project's directory, add this package with `yalc add @your-scope/react-vite-package-template`.
-3. Publish changes to the local Yalc store by running `npm run yalc:publish` in this package's directory.
-4. Push updates to the target project with `npm run yalc:push`, which notifies the target project of the latest changes.
-5. Alternatively, manually update the package in the target project with `yalc update @your-scope/react-vite-package-template`.
-
-Follow these steps to ensure your changes work as expected before submitting them.
 
 ## Publishing
 

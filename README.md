@@ -12,7 +12,6 @@ Before you begin, ensure you have met the following requirements:
 
 - **[Node.js](https://nodejs.org/)**: Version 24.19.0 or later is required (as specified in [.nvmrc](.nvmrc)).
 - **[pnpm](https://pnpm.io/)**: Dependency management tool for Node.js, version 10.17.1 (as specified in [package.json](package.json)).
-- **[yalc](https://github.com/wclr/yalc)** (optional): For testing the package locally in other projects without publishing it.
 
 ## Package
 

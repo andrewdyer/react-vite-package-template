@@ -26,21 +26,18 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run clean && vite build",
+    "build": "vite build",
     "build:storybook": "storybook build",
-    "clean": "rimraf dist",
     "format": "prettier --write .",
     "lint": "eslint .",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
-    "storybook": "storybook dev -p 6006",
+    "start:storybook": "storybook dev -p 6006",
     "test": "vitest --run",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "test:watch": "vitest",
-    "typecheck": "tsc -b --noEmit",
-    "yalc:publish": "yalc publish",
-    "yalc:push": "yalc push"
+    "typecheck": "tsc -b --noEmit"
   },
   "peerDependencies": {
     "react": "^19.2.0",
@@ -76,7 +73,6 @@
     "prettier": "^3.9.6",
     "react": "~19.2.9",
     "react-dom": "~19.2.9",
-    "rimraf": "^6.1.4",
     "storybook": "^10.6.5",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.66.0",
