@@ -39,14 +39,33 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['src/setupTests.ts'],
-    include: ['src/**/*.{test,spec}.{ts,tsx}'],
+    setupFiles: 'src/setupTests.ts',
+    include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
     typecheck: {
       tsconfig: './tsconfig.test.json',
     },
     coverage: {
-      reportsDirectory: 'coverage',
+      all: true,
+      include: ['src/**/*.{ts,tsx}'],
       provider: 'v8',
+      reporter: ['text', 'lcov', 'html'],
+      reportsDirectory: 'coverage',
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 80,
+        statements: 80,
+      },
+      exclude: [
+        '**/{.turbo,coverage,dist,node_modules}/**',
+        'src/**/*.d.ts',
+        'src/**/index.{js,jsx,ts,tsx}',
+        'src/**/*.{test,spec}.{js,jsx,ts,tsx}',
+        'src/**/*.stories.{ts,tsx}',
+        'src/**/*.mock.{js,ts}',
+        '**/{vite,eslint}.config.{js,ts}',
+        'src/setupTests.ts',
+      ],
     },
   },
 });
