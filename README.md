@@ -4,13 +4,13 @@ A template for creating packages using the [React](https://react.dev/) framework
 
 ## Introduction
 
-This template provides a focused foundation for building and publishing reusable React component packages. It is designed to support consistent tooling, reliable builds, and automated releases, so effort goes into the components rather than the setup. Its tooling and configuration mirror the shared packages in the [React + Vite + Turborepo Template](https://github.com/andrewdyer/react-vite-turborepo-template), allowing a package to start life as a standalone repository and move into a monorepo later with minimal changes.
+This template provides a focused foundation for building and publishing reusable React component packages. It is designed to support consistent tooling, reliable builds, and automated releases, so effort goes into the components rather than the setup. Its linting, testing, Storybook and commit conventions match the shared packages in the [React + Vite + Turborepo Template](https://github.com/andrewdyer/react-vite-turborepo-template), so components built here follow the same standards and can move into the monorepo later.
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- **[Node.js](https://nodejs.org/)**: Version 24.19.0 is required (as specified in [.nvmrc](.nvmrc)).
+- **[Node.js](https://nodejs.org/)**: Version 24.19.0 or later is required (as specified in [.nvmrc](.nvmrc)).
 - **[pnpm](https://pnpm.io/)**: Dependency management tool for Node.js, version 10.17.1 (as specified in [package.json](package.json)).
 - **[yalc](https://github.com/wclr/yalc)** (optional): For testing the package locally in other projects without publishing it.
 
@@ -44,7 +44,7 @@ The package is built with Vite and TypeScript, providing reusable components rea
 - TypeScript declaration generation with [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts).
 - [Vitest](https://vitest.dev/) for unit testing, along with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing React components, [Vitest UI](https://vitest.dev/guide/ui.html), [jsdom](https://github.com/jsdom/jsdom) environment, and [coverage reports](https://vitest.dev/guide/coverage.html) with enforced thresholds.
 - [Storybook](https://storybook.js.org/) for developing and documenting components in isolation, with accessibility checks.
-- [ESLint](https://eslint.org/) rules matching the shared configuration in the React + Vite + Turborepo Template.
+- [ESLint](https://eslint.org/) for linting TypeScript, React and hooks usage, import ordering, and Storybook stories.
 - Pre-commit checks with [lint-staged](https://github.com/lint-staged/lint-staged) to maintain code quality.
 
 ## Tooling
